@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-con{
+            padding: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-con">
+        <button id="btn">Click Me</button>
+    </div>
+
+    <script>
+        let btnEl = document.getElementById("btn")
+        btnEl.addEventListener("click",changeColor)
+
+        function changeColor(){
+            let randomChar = "0123456789ABCDEF"
+            let color = "#"
+            for(i=0;i <6; i++){
+                let colorString = Math.floor(Math.random() * 16)
+                color += randomChar[colorString]
+            }
+
+            document.body.style.backgroundColor = color
+        }
+
+
+        
+    </script>
+</body>
+</html>
